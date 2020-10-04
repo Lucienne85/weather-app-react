@@ -1,16 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Weather from "./Weather";
+import Searchbar from "./Searchbar";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Hello From React</h1>
-        <Weather city="Amsterdam" />
-      </header>
+      <h1 className="Header">Weather App</h1>
+      <Searchbar />
+      <Weather city="Amsterdam" />
     </div>
   );
 }
-
-export default App;

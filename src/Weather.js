@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 export default function Weather(props) {
-  let [temperature, setTemperature] = useState(20);
+  let [temperature, setTemperature] = useState(0);
   let [cityName, setCityName] = useState("");
 
   function showWeather(response) {

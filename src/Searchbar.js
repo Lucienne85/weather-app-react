@@ -3,9 +3,9 @@ import "./Searchbar.css";
 
 export default function Searchbar() {
   return (
-    <div className="Search">
+    <div className="Searchbar">
       <div className="row">
-        <form className="searchbar">
+        <form className="totalform">
           <input
             className="form-control"
             type="text"

@@ -12,7 +12,7 @@ export default function Weather(props) {
   }
 
   let apiKey = "1192a0652f0754927fef474420498ea7";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&units=metric&appid=${apiKey}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Portland&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(showWeather);
 
   return (

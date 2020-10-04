@@ -4,6 +4,7 @@ import Searchbar from "./Searchbar";
 import Weatherblock from "./Weatherblock";
 import Weather from "./Weather";
 import Forecastblock from "./Forecastblock";
+import Footer from "./Footer";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <Searchbar />
       <Weatherblock />
       <Forecastblock />
+      <Footer />
       <Weather />
     </div>
   );

@@ -1,0 +1,23 @@
+.Footer .githubLink {
+  max-width: 440px;
+  margin: 0 auto;
+  font-size: 13px;
+  text-align: right;
+  margin-bottom: 70px;
+  color: #6d757d;
+}
+
+.Footer .gitLink {
+  margin-right: 5px;
+}
+
+.Footer .linkedinLogo {
+  width: 12px;
+  margin: 0 8px 0 5px;
+  vertical-align: unset;
+}
+
+.Footer footer {
+  font-size: 10px;
+  margin: 0 0 5px 5px;
+}

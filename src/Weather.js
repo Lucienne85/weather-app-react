@@ -17,7 +17,7 @@ export default function Weather(props) {
 
   return (
     <div className="weather">
-      The temperature in {cityName} is {temperature}°C
+      The temperature in {cityName} is currently {temperature}°C
     </div>
   );
 }

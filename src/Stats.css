@@ -1,0 +1,24 @@
+.statTotal {
+  border-radius: 10px;
+  width: 100px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: 180ms ease-in;
+}
+
+.statTotal:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.statIcon {
+  max-width: 35px;
+  height: 35px;
+  margin-top: 10px;
+}
+
+.statType {
+  font-size: 12px;
+}
+.stats {
+  font-size: 18px;
+}

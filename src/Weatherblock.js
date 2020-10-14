@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Weatherblock.css";
+import FormattedDate from "./FormattedDate";
 import Stats from "./Stats";
 import axios from "axios";
 
@@ -17,6 +18,7 @@ export default function Weatherblock(props) {
       cityName: response.data.name,
       country: response.data.sys.country,
       feelsLike: response.data.main.feels_like,
+      date: new Date(response.data.dt * 1000)
     });
   }
 
@@ -32,7 +34,7 @@ export default function Weatherblock(props) {
               ({weatherData.country})
             </h2>
             <p className="currentDate" id="date-now">
-              Last updated: Sunday - July 5th 2020 - 21:47 PM
+              <FormattedDate date = {weatherData.date}/>
             </p>
             <div className="weatherNow">
               <h1 className="currentTemp" id="temp-now">

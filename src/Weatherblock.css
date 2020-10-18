@@ -1,11 +1,11 @@
-.WeatherInfo .blockWeatherNow,
-.WeatherInfo .weatherNow,
-.WeatherInfo .metricButton {
+.Weatherblock .blockWeatherNow,
+.Weatherblock .weatherNow,
+.Weatherblock .metricButton {
   margin: 0 auto;
   border-radius: 10px;
 }
 
-.WeatherInfo .blockWeatherNow {
+.Weatherblock .blockWeatherNow {
   max-width: 440px;
   box-shadow: 2px 2px 10px darkgray;
   background-size: 470px;
@@ -15,7 +15,7 @@
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/001/972/original/Sunny2Background.jpg?1597414926");
 }
 
-.WeatherInfo .blockWeatherNow::before {
+.Weatherblock .blockWeatherNow::before {
   content: "";
   position: absolute;
   top: 0px;
@@ -25,34 +25,34 @@
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.WeatherInfo .showNow {
+.Weatherblock .showNow {
   position: relative;
 }
 
-.WeatherInfo .city,
-.WeatherInfo .currentTemp {
+.Weatherblock .city,
+.Weatherblock .currentTemp {
   font-family: "Lobster Two", cursive;
   font-size: 43px;
   margin: 0;
 }
 
-.WeatherInfo .city {
+.Weatherblock .city {
   padding: 15px 0 0 20px;
   display: inline-block;
 }
 
-.WeatherInfo .country {
+.Weatherblock .country {
   display: inline;
   font-size: 18px;
   margin-left: 5px;
 }
 
-.WeatherInfo .currentDate {
+.Weatherblock .currentDate {
   font-size: 14px;
   padding-left: 20px;
 }
 
-.WeatherInfo .weatherNow {
+.Weatherblock .weatherNow {
   text-align: center;
   margin-top: 25px;
   width: fit-content;
@@ -61,23 +61,23 @@
   transition: 180ms ease-in;
 }
 
-.WeatherInfo .weatherNow:hover {
+.Weatherblock .weatherNow:hover {
   background-color: rgba(255, 255, 255, 1);
 }
 
-.WeatherInfo .currentIcon {
+.Weatherblock .currentIcon {
   max-width: 45px;
   max-height: 45px;
   margin: 5px 0;
 }
 
-.WeatherInfo .weatherType {
+.Weatherblock .weatherType {
   font-size: 20px;
   font-weight: 800;
   margin-bottom: 0;
 }
 
-.WeatherInfo .metricButton {
+.Weatherblock .metricButton {
   display: block;
   margin-top: 5px;
   border: none;
@@ -86,11 +86,11 @@
   background-color: rgba(255, 255, 255, 0.7);
   transition: 180ms ease-in;
 }
-.WeatherInfo .metricButton:hover {
+.Weatherblock .metricButton:hover {
   background-color: rgba(255, 255, 255, 1);
 }
 
-.WeatherInfo .todayStats {
+.Weatherblock .todayStats {
   text-align: center;
   margin: 25px 15px;
 }

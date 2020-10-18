@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import "./Weatherblock.css";
-import FormattedDate from "./FormattedDate";
-import Stats from "./Stats";
+import WeatherInfo from "./WeatherInfo";
+import "./Searchbar.css";
 import axios from "axios";
 
 export default function Weatherblock(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
     console.log(response.data);
@@ -22,69 +22,52 @@ export default function Weatherblock(props) {
     });
   }
 
+function search(){
+const apiKey = "1192a0652f0754927fef474420498ea7";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+axios.get(apiUrl).then(handleResponse);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+search();
+}
+
+function updateCity(event) {
+setCity(event.target.value);
+}
+
   if (weatherData.ready) {
     return (
-      <div className="Weatherblock">
-        <div className="blockWeatherNow" id="weather-now">
-          <div className="showNow">
-            <h2 className="city" id="searched-city">
-              {weatherData.cityName}
-            </h2>
-            <h2 className="country" id="country">
-              ({weatherData.country})
-            </h2>
-            <p className="currentDate" id="date-now">
-              <FormattedDate date = {weatherData.date}/>
-            </p>
-            <div className="weatherNow">
-              <h1 className="currentTemp" id="temp-now">
-                {Math.round(weatherData.temperature)}°C
-              </h1>
-              <img
-                className="currentIcon"
-                id="current-icon"
-                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/001/212/original/sun.png?1592137951"
-                alt="full sun"
-              />
-              <p className="text-capitalize weatherType">
-                {weatherData.description}
-              </p>
-            </div>
-            <button className="metricButton" id="fahrenheit-button">
-              Show Fahrenheit
-            </button>
-            <div className="row todayStats">
-              <Stats
-                type="Humidity"
-                value={weatherData.humidity}
-                description="%"
-                icon="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/001/217/original/humidity.png?1592138134"
-                alt="humidity icon"
-              />
-              <Stats
-                type="Wind"
-                value={Math.round(weatherData.wind)}
-                description=" km/h"
-                icon="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/001/218/original/wind.png?1592138180"
-                alt="wind icon"
-              />
-              <Stats
-                type="Feels like"
-                value={Math.round(weatherData.feelsLike)}
-                description="°C"
-                icon="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/001/417/original/thermometer.png?1593809060"
-                alt="feels like icon"
-              />
-            </div>
-          </div>
-        </div>
+      <div className = "Weatherblock">
+      <div className="Searchbar">
+      <div className="row">
+        <form className="totalform" onSubmit={handleSubmit}>
+          <input
+            className="form-control"
+            type="text"
+            placeholder="Search your location"
+            autoComplete="off"
+            onChange={updateCity}
+          />
+          <button className="searchButton" type="submit">
+            <i className="fas fa-search"></i>
+          </button>
+          <button className="currentLocation" id="current-location">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/001/426/original/location.png?1593886732"
+              alt="locationIcon"
+              className="locationIcon"
+            />
+          </button>
+        </form>
+      </div>
+    </div>
+      <WeatherInfo data={weatherData}/>
       </div>
     );
   } else {
-    const apiKey = "1192a0652f0754927fef474420498ea7";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&units=metric&appid=${apiKey}`;
-    axios.get(apiUrl).then(handleResponse);
-
+    search();
     return <h4>Loading</h4>;
   }
 }

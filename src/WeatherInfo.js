@@ -1,6 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import Stats from "./Stats";
+import CurrentIcon from "./CurrentIcon";
 import "./WeatherInfo.css";
 
 export default function WeatherInfo(props){
@@ -21,12 +22,7 @@ export default function WeatherInfo(props){
               <h1 className="currentTemp" id="temp-now">
                 {Math.round(props.data.temperature)}°C
               </h1>
-              <img
-                className="currentIcon"
-                id="current-icon"
-                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/001/212/original/sun.png?1592137951"
-                alt="full sun"
-              />
+              <CurrentIcon code="01d"/>
               <p className="text-capitalize weatherType">
                 {props.data.description}
               </p>

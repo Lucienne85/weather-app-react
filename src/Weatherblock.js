@@ -6,13 +6,14 @@ import axios from "axios";
 export default function Weatherblock(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
-
+  
   function handleResponse(response) {
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
+      icon: response.data.weather[0].icon,
       wind: response.data.wind.speed,
       cityName: response.data.name,
       country: response.data.sys.country,

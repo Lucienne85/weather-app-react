@@ -22,7 +22,7 @@ export default function WeatherInfo(props){
               <h1 className="currentTemp" id="temp-now">
                 {Math.round(props.data.temperature)}°C
               </h1>
-              <CurrentIcon code="01d"/>
+              <CurrentIcon code={props.data.icon}/>
               <p className="text-capitalize weatherType">
                 {props.data.description}
               </p>

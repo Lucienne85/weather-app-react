@@ -1,11 +1,11 @@
-.WeatherInfo .blockWeatherNow,
-.WeatherInfo .weatherNow,
-.WeatherInfo .metricButton {
+.SearchResult .blockWeatherNow,
+.SearchResult .weatherNow,
+.SearchResult .metricButton {
   margin: 0 auto;
   border-radius: 10px;
 }
 
-.WeatherInfo .blockWeatherNow {
+.SearchResult .blockWeatherNow {
   max-width: 440px;
   box-shadow: 2px 2px 10px darkgray;
   background-size: 470px;
@@ -15,7 +15,7 @@
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/001/972/original/Sunny2Background.jpg?1597414926");
 }
 
-.WeatherInfo .blockWeatherNow::before {
+.SearchResult .blockWeatherNow::before {
   content: "";
   position: absolute;
   top: 0px;
@@ -25,34 +25,34 @@
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.WeatherInfo .showNow {
+.SearchResult .showNow {
   position: relative;
 }
 
-.WeatherInfo .city,
-.WeatherInfo .currentTemp {
+.SearchResult .city,
+.SearchResult .currentTemp {
   font-family: "Lobster Two", cursive;
   font-size: 43px;
   margin: 0;
 }
 
-.WeatherInfo .city {
+.SearchResult .city {
   padding: 15px 0 0 20px;
   display: inline-block;
 }
 
-.WeatherInfo .country {
+.SearchResult .country {
   display: inline;
   font-size: 18px;
   margin-left: 5px;
 }
 
-.WeatherInfo .currentDate {
+.SearchResult .currentDate {
   font-size: 14px;
   padding-left: 20px;
 }
 
-.WeatherInfo .weatherNow {
+.SearchResult .weatherNow {
   text-align: center;
   margin-top: 25px;
   width: fit-content;
@@ -61,17 +61,17 @@
   transition: 180ms ease-in;
 }
 
-.WeatherInfo .weatherNow:hover {
+.SearchResult .weatherNow:hover {
   background-color: rgba(255, 255, 255, 1);
 }
 
-.WeatherInfo .weatherType {
+.SearchResult .weatherType {
   font-size: 20px;
   font-weight: 800;
   margin-bottom: 0;
 }
 
-.WeatherInfo .metricButton {
+.SearchResult .metricButton {
   display: block;
   margin-top: 5px;
   border: none;
@@ -80,11 +80,11 @@
   background-color: rgba(255, 255, 255, 0.7);
   transition: 180ms ease-in;
 }
-.WeatherInfo .metricButton:hover {
+.SearchResult .metricButton:hover {
   background-color: rgba(255, 255, 255, 1);
 }
 
-.WeatherInfo .todayStats {
+.SearchResult .todayStats {
   text-align: center;
   margin: 25px 15px;
 }

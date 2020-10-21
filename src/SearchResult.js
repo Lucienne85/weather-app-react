@@ -1,7 +1,5 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
-import Stats from "./Stats";
-import CurrentIcon from "./CurrentIcon";
 import WeatherInfo from "./WeatherInfo";
 import "./SearchResult.css";
 

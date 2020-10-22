@@ -66,7 +66,7 @@ if (unit === "celsius") {
                  <div className="WeatherInfo">
             <div className="weatherNow">
               <h1 className="currentTemp">
-                {Math.round(calculateFahrenheit(props.temperature))}°C
+                {Math.round(calculateFahrenheit(props.temperature))}°F
               </h1>
               <CurrentIcon code={props.icon}/>
               <p className="text-capitalize weatherType">
@@ -94,7 +94,7 @@ if (unit === "celsius") {
               <Stats
                 type="Feels like"
                 value={Math.round(calculateFahrenheit(props.feelsLike))}
-                description="°C"
+                description="°F"
                 icon="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/001/417/original/thermometer.png?1593809060"
                 alt="feels like icon"
               />

@@ -5,12 +5,12 @@ import ForecastLine from "./ForecastLine";
 
 export default function Forecastblock(props) {
 const [loaded, setLoaded] = useState(false);
-const [forecast, setForecast] = useState(null);
+const [forecast, setForecast] = useState({});
 
 function handleForecastResponse(response){
-  setLoaded(true);
   setForecast(response.data);
   console.log(forecast);
+  setLoaded(true);
 }
 
  if (loaded && props.city === forecast.city.name) { return (

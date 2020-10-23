@@ -10,10 +10,10 @@ const [forecast, setForecast] = useState(null);
 function handleForecastResponse(response){
   setLoaded(true);
   setForecast(response.data);
-  console.log(response.data);
+  console.log(forecast);
 }
 
- if (loaded) { return (
+ if (loaded && props.city === forecast.city.name) { return (
     <div className="Forecastblock">
       <div className="upcomingHours">
         <ForecastLine

@@ -1,7 +1,7 @@
 import React from "react";
-import "./Forecast.css";
+import "./ForecastLine.css";
 
-export default function Forecast(props) {
+export default function ForecastLine(props) {
   return (
     <div className="Forecast">
       <div className="row">

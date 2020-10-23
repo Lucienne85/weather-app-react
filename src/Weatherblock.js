@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SearchResult from "./SearchResult";
+import Forecastblock from "./Forecastblock";
 import "./Searchbar.css";
 import axios from "axios";
 
@@ -64,6 +65,7 @@ setCity(event.target.value);
       </div>
     </div>
       <SearchResult data={weatherData}/>
+      <Forecastblock city={weatherData.cityName} />
       </div>
     );
   } else {

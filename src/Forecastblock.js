@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import "./Forecastblock.css";
 import Forecast from "./Forecast";
 
-export default function Forecastblock() {
-  return (
+export default function Forecastblock(props) {
+const [loaded, setLoaded] = useState(false);
+
+function handleForecastResponse(response){
+  setLoaded(true);
+  console.log(response.data);
+}
+
+ if (loaded) { return (
     <div className="Forecastblock">
       <div className="upcomingHours">
         <Forecast
@@ -37,4 +45,10 @@ export default function Forecastblock() {
       </div>
     </div>
   );
-}
+ } else {
+let apiKey = "1192a0652f0754927fef474420498ea7";
+let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=metric`
+axios.get(apiUrl).then(handleForecastResponse); 
+return null
+ }
+} 

@@ -2,7 +2,6 @@ import React from "react";
 import "./CurrentIcon.css";
 
 export default function CurrentIcon(props){
-console.log(props.code);
 
 const iconMapping = {
 "01d": "images/sun.png",

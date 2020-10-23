@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import Weatherblock from "./Weatherblock";
-import Forecastblock from "./Forecastblock";
 import Footer from "./Footer";
 
 export default function App() {
@@ -10,7 +9,6 @@ export default function App() {
       <div className="container">
         <h1 className="Header">Weather App</h1>
         <Weatherblock defaultCity="Amsterdam" />
-        <Forecastblock />
         <Footer />
       </div>
     </div>

@@ -19,31 +19,19 @@ function handleForecastResponse(response){
       <div className="upcomingHours">
         <ForecastLine
           time="The next hour"
-          minTemp={forecast.list[0].main.temp_min}
-          maxTemp={forecast.list[0].main.temp_max}
-          description="°C"
-          icon={forecast.list[0].weather[0].icon}
+          data={forecast.list[0]}
         />
         <ForecastLine
           time="In 3 hours"
-          minTemp={forecast.list[1].main.temp_min}
-          maxTemp={forecast.list[1].main.temp_max}
-          description="°C"
-          icon={forecast.list[1].weather[0].icon}
+          data={forecast.list[1]}
         />
         <ForecastLine
           time="In 6 hours"
-          minTemp={forecast.list[2].main.temp_min}
-          maxTemp={forecast.list[2].main.temp_max}
-          description="°C"
-          icon={forecast.list[2].weather[0].icon}
+          data={forecast.list[2]}
         />
         <ForecastLine
           time="In 9 hours"
-          minTemp={forecast.list[3].main.temp_min}
-          maxTemp={forecast.list[3].main.temp_max}
-          description="°C"
-          icon={forecast.list[3].weather[0].icon}
+          data={forecast.list[3]}
         />
       </div>
     </div>

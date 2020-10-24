@@ -1,31 +1,32 @@
-.Forecast h5 {
+.ForecastLine h5 {
   margin: 0 20px;
   line-height: 2.2;
   font-size: 18px;
 }
 
-.Forecast h5,
-.Forecast .temperature {
+.ForecastLine h5,
+.ForecastLine .temperature {
   color: #6d757d;
 }
 
-.Forecast .temperature {
+.ForecastLine .temperature {
   font-size: 15px;
   line-height: 3;
   text-align: center;
 }
-.Forecast .showIcon {
+.ForecastLine .showIcon {
   text-align: right;
   padding-left: 0;
   padding-right: 50px;
 }
-.Forecast .hourIcons {
+
+.ForecastLine hr {
+  margin: 0 10px;
+}
+
+.ForecastLine .currentIcon {
   max-width: 35px;
   height: 35px;
   margin: 5px 0;
   opacity: 0.6;
-}
-
-.Forecast hr {
-  margin: 0 10px;
 }

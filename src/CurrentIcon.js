@@ -27,8 +27,6 @@ const iconMapping = {
     return  <img
                 className="currentIcon"
                 src={iconMapping[props.code]}
-                alt="sunnyTest"
+                alt="weatherIcon"
               />
 }
-// src={require('./images/sun.png')}
-//{iconMapping[props.code]}

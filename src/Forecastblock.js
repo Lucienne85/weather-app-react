@@ -9,40 +9,41 @@ const [forecast, setForecast] = useState({});
 
 function handleForecastResponse(response){
   setForecast(response.data);
-  console.log(forecast);
   setLoaded(true);
 }
 
- if (loaded && props.city === forecast.city.name) { return (
+ if (loaded && props.city === forecast.city.name) {   
+   console.log(forecast);
+  return (
     <div className="Forecastblock">
       <div className="upcomingHours">
         <ForecastLine
-          time={props.city}
-          minTemp={13}
-          maxTemp={18}
+          time="The next hour"
+          minTemp={forecast.list[0].main.temp_min}
+          maxTemp={forecast.list[0].main.temp_max}
           description="°C"
-          icon="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/001/212/original/sun.png?1592137951"
+          icon={forecast.list[0].weather[0].icon}
         />
         <ForecastLine
           time="In 3 hours"
-          minTemp={-1}
-          maxTemp={2}
+          minTemp={forecast.list[1].main.temp_min}
+          maxTemp={forecast.list[1].main.temp_max}
           description="°C"
-          icon="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/001/220/original/ice.png?1592138257"
+          icon={forecast.list[1].weather[0].icon}
         />
         <ForecastLine
           time="In 6 hours"
-          minTemp={0}
-          maxTemp={1}
+          minTemp={forecast.list[2].main.temp_min}
+          maxTemp={forecast.list[2].main.temp_max}
           description="°C"
-          icon="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/001/218/original/wind.png?1592138180"
+          icon={forecast.list[2].weather[0].icon}
         />
         <ForecastLine
           time="In 9 hours"
-          minTemp={2}
-          maxTemp={5}
+          minTemp={forecast.list[3].main.temp_min}
+          maxTemp={forecast.list[3].main.temp_max}
           description="°C"
-          icon="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/001/213/original/partialsun.png?1592137989"
+          icon={forecast.list[3].weather[0].icon}
         />
       </div>
     </div>

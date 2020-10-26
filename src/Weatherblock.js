@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import SearchResult from "./SearchResult";
-import Forecastblock from "./Forecastblock";
 import "./Searchbar.css";
 import axios from "axios";
 

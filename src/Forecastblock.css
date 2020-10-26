@@ -1,3 +1,7 @@
+.Forecastblock {
+  margin-top: 40px;
+}
+
 .Forecastblock .upcomingHours {
   max-width: 440px;
   margin: 0 auto;

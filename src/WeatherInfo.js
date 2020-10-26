@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CurrentIcon from "./CurrentIcon";
 import Stats from "./Stats";
+import Forecastblock from "./Forecastblock";
 
 export default function WeatherInfo(props){
 const [unit, setUnit] = useState("celsius");
@@ -18,8 +19,6 @@ function showCelsius(event){
 function calculateFahrenheit(celsiusTemp){
   return (celsiusTemp * 1.8) + 32;
 }
-
-// celsiusTemp * 1.8 + 32
 
 if (unit === "celsius") {
   return (
@@ -59,6 +58,7 @@ if (unit === "celsius") {
                 alt="feels like icon"
               />
             </div>
+            <Forecastblock city={props.cityName} unit="celsius"/>
     </div>
   );
   } else {
@@ -99,6 +99,7 @@ if (unit === "celsius") {
                 alt="feels like icon"
               />
             </div>
+            <Forecastblock city={props.cityName} unit="fahrenheit"/>
     </div>
     );
   }

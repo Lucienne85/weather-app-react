@@ -65,7 +65,6 @@ setCity(event.target.value);
       </div>
     </div>
       <SearchResult data={weatherData}/>
-      <Forecastblock city={weatherData.cityName} />
       </div>
     );
   } else {

@@ -13,25 +13,28 @@ function handleForecastResponse(response){
 }
 
  if (loaded && props.city === forecast.city.name) {   
-   console.log(forecast);
   return (
     <div className="Forecastblock">
       <div className="upcomingHours">
         <ForecastLine
           time="The next hour"
           data={forecast.list[0]}
+          unit={props.unit}
         />
         <ForecastLine
           time="In 3 hours"
           data={forecast.list[1]}
+          unit={props.unit}
         />
         <ForecastLine
           time="In 6 hours"
           data={forecast.list[2]}
+          unit={props.unit}
         />
         <ForecastLine
           time="In 9 hours"
           data={forecast.list[3]}
+          unit={props.unit}
         />
       </div>
     </div>

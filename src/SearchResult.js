@@ -17,7 +17,7 @@ export default function SearchResult(props){
             <p className="currentDate">
               <FormattedDate date = {props.data.date}/>
             </p>
-            <WeatherInfo temperature={props.data.temperature} icon={props.data.icon} description={props.data.description} humidity={props.data.humidity} wind={props.data.wind} feelsLike={props.data.feelsLike}/>
+            <WeatherInfo temperature={props.data.temperature} icon={props.data.icon} description={props.data.description} humidity={props.data.humidity} wind={props.data.wind} feelsLike={props.data.feelsLike} cityName={props.data.cityName} />
           </div>
         </div>
       </div>

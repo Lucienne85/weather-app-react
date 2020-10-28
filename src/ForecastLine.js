@@ -27,7 +27,6 @@ export default function ForecastLine(props) {
   }
 
   let unit = props.unit;
-  console.log(unit);
 
  if (unit === "celsius") {
    return (

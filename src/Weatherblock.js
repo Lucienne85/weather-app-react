@@ -37,6 +37,20 @@ function updateCity(event) {
 setCity(event.target.value);
 }
 
+function getPositionWeather(position){
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  const apiKey = "1192a0652f0754927fef474420498ea7";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
+  axios.get(apiUrl).then(handleResponse);
+}
+
+function getCurrentLocation(event){
+  event.preventDefault();
+  alert("Let's look at the weather for your current location!");
+  navigator.geolocation.getCurrentPosition(getPositionWeather);
+}
+
   if (weatherData.ready) {
     return (
       <div className = "Weatherblock">
@@ -53,7 +67,7 @@ setCity(event.target.value);
           <button className="searchButton" type="submit">
             <i className="fas fa-search"></i>
           </button>
-          <button className="currentLocation" id="current-location">
+          <button className="currentLocation" onClick={getCurrentLocation}>
             <img
               src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/001/426/original/location.png?1593886732"
               alt="locationIcon"

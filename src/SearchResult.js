@@ -9,8 +9,6 @@ const[weathertype, setWeathertype] = useState("Sunny");
 const[background, setBackground] = useState(false);
 const[searchedcity, setSearchedcity] = useState(null)
 
-console.log(props.data.icon);
-
 function determineBackground(){
   if (props.data.icon === "01d") {
     setWeathertype("Sunny")

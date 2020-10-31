@@ -8,7 +8,7 @@ export default function Stats(props) {
         <img className="statIcon" src={props.icon} alt={props.alt} />
         <br />
         <span className="statType">{props.type}</span> <br />
-        <span className="stats" id="humidity">
+        <span className="stats">
           {props.value}
           {props.description}
         </span>

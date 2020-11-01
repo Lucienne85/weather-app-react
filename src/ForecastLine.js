@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ForecastLine.css";
 import CurrentIcon from "./CurrentIcon";
 
 export default function ForecastLine(props) {
 
-  const [tempmin, setTempmin] = useState(props.data.main.temp_min);
-  const [tempmax, setTempmax] = useState(props.data.main.temp_max);
- 
+let tempmin = props.data.main.temp_min;
+let tempmax = props.data.main.temp_max;
+
   function TempMinFahrenheit() {
     let TempMinFahrenheit = Math.round((tempmin * 1.8) + 32);
     return `${TempMinFahrenheit}°F`

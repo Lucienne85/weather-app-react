@@ -24,9 +24,30 @@ const iconMapping = {
 "50n": "images/fog.png"
     };
 
+const altMapping = {
+  "01d": "sun icon",
+  "01n": "clear moon icon",
+  "02d": "partial sun icon",
+  "02n": "partal moon icon",
+  "03d": "cloud icon",
+  "03n": "cloud icon",
+  "04d": "multiple clouds icon",
+  "04n": "multiple clouds icon",
+  "09d": "umbrella icon",
+  "09n": "umbrella icon",
+  "10d": "umbrella icon",
+  "10n": "umbrella icon",
+  "11d": "thunder icon",
+  "11n": "thunder icon",
+  "13d": "snow icon",
+  "13n": "snow icon",
+  "50d": "fog icon",
+  "50n": "fog icon"
+};
+
     return  <img
                 className="currentIcon"
                 src={iconMapping[props.code]}
-                alt="weatherIcon"
+                alt={altMapping[props.code]}
               />
 }

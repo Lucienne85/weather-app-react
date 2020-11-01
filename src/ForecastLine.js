@@ -1,28 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ForecastLine.css";
 import CurrentIcon from "./CurrentIcon";
 
 export default function ForecastLine(props) {
 
-  function minimumTemp(){
-    let TempMin = Math.round(props.data.main.temp_min);
-    return `${TempMin}°C`
-  }
-
+  const [tempmin, setTempmin] = useState(props.data.main.temp_min);
+  const [tempmax, setTempmax] = useState(props.data.main.temp_max);
+ 
   function TempMinFahrenheit() {
-    let TempMin = props.data.main.temp_min;
-    let TempMinFahrenheit = Math.round((TempMin * 1.8) + 32);
+    let TempMinFahrenheit = Math.round((tempmin * 1.8) + 32);
     return `${TempMinFahrenheit}°F`
   } 
 
-  function maximumTemp(){
-    let TempMax = Math.round(props.data.main.temp_max);
-    return `${TempMax}°C`
-  }
-
   function TempMaxFahrenheit(){
-    let TempMax = props.data.main.temp_max;
-    let TempMaxFahrenheit = Math.round((TempMax * 1.8) + 32);
+    let TempMaxFahrenheit = Math.round((tempmax * 1.8) + 32);
     return `${TempMaxFahrenheit}°F`
   }
 
@@ -36,7 +27,7 @@ export default function ForecastLine(props) {
           <h5>{props.time}</h5>
         </div>
         <div className="temperature col-5">
-          {minimumTemp()} / {maximumTemp()}
+          {Math.round(tempmin)}°C / {Math.round(tempmax)}°C
         </div>
         <div className="col-2 showIcon">
         <CurrentIcon code={props.data.weather[0].icon} />

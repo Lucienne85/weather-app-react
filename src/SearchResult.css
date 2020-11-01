@@ -15,54 +15,54 @@
 }
 
 .SearchResult .Sunny {
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/001/972/original/Sunny2Background.jpg?1597414926");
+  background-image: url("images/SunnyBackground.jpg");
 }
 .SearchResult .Clearnight {
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/003/207/original/ClearNight.png?1603916522");
+  background-image: url("images/ClearNight.png");
 }
 
 .SearchResult .Fewcloudsday {
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/003/208/original/FewCloudsBackground.jpg?1603916656");
+  background-image: url("images/FewCloudsBackground.jpg");
 }
 
 .SearchResult .Fewcloudsnight {
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/003/209/original/FewCloudsNight.png?1603916798");
+  background-image: url("images/FewCloudsNight.png");
 }
 
 .SearchResult .Scatteredday {
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/003/210/original/ScatteredCloud.png?1603916973");
+  background-image: url("images/ScatteredCloud.png");
 }
 
 .SearchResult .Scatterednight {
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/003/211/original/ScatteredNight.png?1603917028");
+  background-image: url("images/ScatteredNight.png");
 }
 
 .SearchResult .Cloudyday {
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/003/212/original/Overcast.jpg?1603917292");
+  background-image: url("images/Overcast.jpg");
 }
 
 .SearchResult .Cloudynight {
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/003/213/original/BrokenNight.png?1603917331");
+  background-image: url("images/BrokenNight.png");
 }
 
 .SearchResult .Fog {
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/003/214/original/FoggyBackground.png?1603917543");
+  background-image: url("images/FoggyBackground.png");
 }
 
 .SearchResult .Ice {
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/003/215/original/FreezingBackground.jpg?1603917626");
+  background-image: url("images/FreezingBackground.jpg");
 }
 
 .SearchResult .Thunder {
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/003/216/original/LightningBackground.jpg?1603917817");
+  background-image: url("images/LightningBackground.jpg");
 }
 
 .SearchResult .Rainday {
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/003/217/original/RainBackground.jpg?1603918016");
+  background-image: url("images/RainBackground.jpg");
 }
 
 .SearchResult .Rainnight {
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/003/218/original/NightRain.png?1603918147");
+  background-image: url("images/NightRain.png");
 }
 
 .SearchResult .blockWeatherNow::before {
